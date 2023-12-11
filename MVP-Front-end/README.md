@@ -14,10 +14,6 @@ Este projeto está organizado de acordo com as seguintes estruturas de pastas e 
 
   - Contém os arquivos JavaScript responsáveis por lidar com as requisições da API. A pasta contém os arquivos apiBaseURL.js, que exporta a URL base da API, e o arquivo apiRequests.js, que possui as funções responsáveis pelas requisições POST, GET, PUT e DELETE.
 
-- **data**
-
-  - Possui os arquivos que armazenam e exportam dados que serão utilizados na aplicação Web.
-
 - **img**
 
   - Contém as imagens que serão usadas na aplicação Web.
