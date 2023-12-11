@@ -1,0 +1,115 @@
+/* Use a Google Font with a more rounded and bold style */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+/* Update the font-family and font-weight for the entire document */
+body,
+#parent,
+table.naked_table,
+input[type="button"].btn,
+label.before_slider {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Adjust font-weight as needed */
+}
+
+#parent {
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: 0 auto;
+  color: #b73e3e;
+  background-color: #dfb3b3;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wrapper .child1 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#wrapper .child2 {
+  float: right;
+  width: 15%;
+  margin-top: 20px;
+}
+
+div.clear {
+  clear: both;
+}
+
+table.naked_table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+table.naked_table td {
+  padding: 10px;
+}
+
+table.naked_table td.input_slider {
+  text-align: left;
+}
+
+.hd-slider-width {
+  width: 80%;
+}
+
+.hd-number-width {
+  width: 15%;
+}
+
+form.slider_input {
+  width: 100%;
+}
+
+label.before_slider {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+input[type="button"].btn {
+  padding: 8px 16px;
+  background-color: #dd5353;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="button"].btn:hover {
+  background-color: #7a2a2a;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 15px;
+  border-radius: 5px;
+  background: #dd5353; /* Reddish tone */
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[name="name"] {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  color: #a03333;
+}

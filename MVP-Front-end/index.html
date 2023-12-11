@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./img/heart.png" type="image/png" />
+    <title>Predição de Doenças Cardíacas</title>
+  </head>
+
+  <body>
+    <div id="parent">
+      <div id="wrapper">
+        <center>
+          <h1 class="text-black probootstrap-heading">
+            Predição de Doenças Cardíacas
+          </h1>
+        </center>
+        <div class="child1">
+          <table class="naked_table">
+            <tbody>
+              <tr>
+                <td>1) Nome</td>
+                <td>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Digite seu nome"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>2) Idade em anos</td>
+                <td>
+                  <input
+                    type="range"
+                    name="age"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('age', this.value)"
+                  />
+                  <span id="ageValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>3) Gênero (0=feminino, 1=masculino)</td>
+                <td>
+                  <input
+                    type="range"
+                    name="sex"
+                    min="0"
+                    max="1"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('sex', this.value)"
+                  />
+                  <span id="sexValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>4) Exercício induz dor no peito? (1=sim, 0=não)</td>
+                <td>
+                  <input
+                    type="range"
+                    name="exang"
+                    min="0"
+                    max="1"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('exang', this.value)"
+                  />
+                  <span id="exangValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>5) Pressão Arterial em Repouso (94 - 200 mmHg)</td>
+                <td>
+                  <input
+                    type="range"
+                    name="trestbps"
+                    min="94"
+                    max="200"
+                    step="1"
+                    value="94"
+                    oninput="updateSliderValue('trestbps', this.value)"
+                  />
+                  <span id="trestbpsValue">94</span>
+                </td>
+              </tr>
+              <tr>
+                <td>6) Colesterol do paciente em mg/dl</td>
+                <td>
+                  <input
+                    type="range"
+                    name="chol"
+                    min="126"
+                    max="564"
+                    step="1"
+                    value="126"
+                    oninput="updateSliderValue('chol', this.value)"
+                  />
+                  <span id="cholValue">126</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>7) Glicose em jejum é maior que 120 mg/dl? (1=sim, 0=não)</td>
+                <td>
+                  <input
+                    type="range"
+                    name="fbs"
+                    min="0"
+                    max="1"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('fbs', this.value)"
+                  />
+                  <span id="fbsValue">0</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  8) Eletrocardiograma em repouso (0=normal, 1=anormalidades da
+                  onda ST-T , 2=hipertrofia ventricular esquerda provável ou
+                  definitiva)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="restecg"
+                    min="0"
+                    max="2"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('restecg', this.value)"
+                  />
+                  <span id="restecgValue">0</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  9) Frequência cardíaca máxima atingida durante um teste de
+                  esforço (71 - 202 BPM)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="thalach"
+                    min="71"
+                    max="202"
+                    step="1"
+                    value="71"
+                    oninput="updateSliderValue('thalach', this.value)"
+                  />
+                  <span id="thalachValue">71</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>10) Depressão do segmento ST do eletrocardiograma (0-6.2 mm)</td>
+                <td>
+                  <input
+                    type="range"
+                    name="oldpeak"
+                    min="0"
+                    max="6.2"
+                    step="0.1"
+                    value="0"
+                    oninput="updateSliderValue('oldpeak', this.value)"
+                  />
+                  <span id="oldpeakValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  11) Número de Vasos Principais Coloridos pela Fluoroscopia (0 - 3)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="ca"
+                    min="0"
+                    max="3"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('ca', this.value)"
+                  />
+                  <span id="caValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  12) Tipo de Dor no Peito (0=angina típica, 1=angina atípica, 2=não
+                  angina, 3=angina assintomática)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="cp"
+                    min="0"
+                    max="3"
+                    step="1"
+                    value="1"
+                    oninput="updateSliderValue('cp', this.value)"
+                  />
+                  <span id="cpValue">1</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  13) Inclinação do Segmento ST no pico do exercício (0=inclinação
+                  descendente, 1=inclinação plana, 2=inclinação ascendente)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="slope"
+                    min="0"
+                    max="2"
+                    step="1"
+                    value="0"
+                    oninput="updateSliderValue('slope', this.value)"
+                  />
+                  <span id="slopeValue">0</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  14) Ocorrência de talassemia (1 = defeito fixo, 2=fluxo sanguíneo
+                  normal, 3=defeito reversível)
+                </td>
+                <td>
+                  <input
+                    type="range"
+                    name="thal"
+                    min="1"
+                    max="3"
+                    step="1"
+                    value="1"
+                    oninput="updateSliderValue('thal', this.value)"
+                  />
+                  <span id="thalValue">1</span>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input
+                    type="button"
+                    class="btn btn-primary"
+                    value="Realizar a predição"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="diagnostic">
+          <h1>Resultado do Exame:</h1>
+          <h2>Preencha seus dados para obter o resultado preditivo do exame!</h2>
+        </div>
+    <script type="module" src="scripts.js"></script>
+
+    <script>
+      function updateSliderValue(inputName, value) {
+        // Atualiza o valor ao lado do controle deslizante
+        document.getElementById(inputName + "Value").textContent = value;
+      }
+    </script>
+  </body>
+</html>
